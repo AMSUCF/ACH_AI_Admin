@@ -21,319 +21,322 @@ let adminReputation = 5;
 let studentReputation = 5;
 
 let initialBooks = [
-  "You pick up Ted Underwood's *Distant Horizons.* It’s like reading tea leaves, but with machine learning and novels. Apparently, AI's future plans for literature involve way more robots than we thought—go figure.",
-  "You flip through Safiya Noble's *Algorithms of Oppression.* Noble pulls no punches—turns out, even AI algorithms are in on society's worst habits. At this rate, the robots might need to take a few sociology courses.",
-  "You glance at Matthew Kirschenbaum's *Track Changes.* His deep dive into the history of word processing is basically a love letter to Clippy. Now, if only AI would stop trying to 'help' you write your own dissertation...",
-  "You open Annette Vee's *Coding Literacy.* Vee makes it clear: if you don’t learn to code, AI will definitely take your job. Well, at least the part of your job that involves creating questionable PowerPoints.",
-  "You scan Douglas Rushkoff's *Team Human.* Rushkoff is waving a flag for human beings in the race against algorithms, but honestly, the algorithms seem like they’re really good at relay races… and everything else.",
-  "You pause at Ian Bogost’s *Play Anything.* He argues life is just a big game, and AI might be the ultimate player. Too bad it keeps glitching out when you ask it to do anything fun, like write a novel or make coffee.",
-  "You find Nick Montfort's *The Future.* Montfort has some bold ideas about AI and creativity. By the time you finish, you’re half-expecting your toaster to write a haiku about breakfast.",
-  "You turn the pages of André Brock's *Distributed Blackness.* Brock points out that AI could easily replicate society’s biases, but hopefully, it’ll at least learn to do it with fewer bugs than Twitter’s trending topics.",
-  "You examine Catherine Knight-Steele’s *Digital Black Feminism.* She suggests AI might either amplify marginalized voices or drown them out with robotic gibberish—either way, there’s bound to be a lot of static.",
-  "You flip open Sarah Roberts' *Behind the Screen.* Roberts reminds you that while AI automates everything, there’s still a human somewhere, frantically deleting the things no one should see—like your 3 a.m. Reddit posts.",
-  "You pick up Nancy Baym's *Personal Connections in the Digital Age.* Baym argues that AI has changed how we communicate. You wonder if AI will start ghosting us, too, just like our friends do.",
-  "You leaf through Joanna Zylinska’s *AI Art.* Zylinska explores the artistic potential of AI, but you're still waiting for it to explain why it thinks every portrait needs extra fingers.",
-  "You pick up *How to Chair A Department.* As you flip through the pages, you realize there's no chapter on how to survive when everyone schedules their meetings at the same time. Maybe that’s the sequel?",
-  "You grab *The College Administrator's Survival Guide.* The first tip is 'Invest in comfortable shoes.' By page 10, it's clear this is less about survival and more about 'embracing chaos gracefully.'",
-  "You open *The Art of Delegating.* The advice seems solid until you realize it boils down to 'delegate everything except the stuff no one else wants to do.' You’re already an expert at this.",
-  "You find *Managing Faculty Egos: A Field Guide.* It's surprisingly short, but that's probably because the solution is just 'nod, smile, and never make eye contact during meetings.'",
-  "You glance at *Crisis Management in Higher Education.* The first chapter suggests keeping a large supply of coffee and tissues handy. By chapter three, you're contemplating adding chocolate to that list.",
-  "You flip through *Budgeting for Dummies: University Edition.* It advises cutting 'non-essential spending,' but every example includes things like 'electricity' and 'office supplies.'",
-  "You grab *The Zen of Academic Leadership.* The book claims you can find inner peace as an administrator. Step one: accept that no one reads your emails. Step two: stop sending emails.",
-  "You open *Building Consensus Without Losing Your Mind.* Spoiler alert: you’re going to lose your mind. But at least there’s a flowchart that helps you decide whether to cry or laugh.",
-  "You pause at *Dealing with Difficult Faculty: A How-To Guide.* The main advice is to avoid using phrases like 'That’s not how we do things,' and to always bring snacks to meetings.",
-  "You leaf through *Meetings That Could Have Been Emails.* It’s mostly blank pages, except for the last one, which just says 'You know what you did.'"
+  "You pick up Matthew Kirschenbaum's *Mechanisms.* He makes a compelling case that hard drives have souls—or at least file allocation tables. You wonder if your center's server room needs an exorcist after last week's mysterious data corruption.",
+  "You flip through Safiya Noble's *Algorithms of Oppression.* Noble's insights make you realize your 'neutral' text analysis tool has been subtly racist this whole time. Time to add another ethics workshop to the calendar.",
+  "You glance at Lauren Klein and Catherine D'Ignazio's *Data Feminism.* They argue data never speaks for itself—which explains why your visualizations keep mumbling incomprehensibly at faculty presentations.",
+  "You open Tara McPherson's *Feminist in a Software Lab.* McPherson connects code to culture in ways that make you question every curly brace. Suddenly, your Python scripts feel politically charged.",
+  "You scan *The Environmental Cost of GPUs: A Horror Story.* This one's self-published by a grad student who calculated their carbon footprint. The dedication reads: 'To the polar bears I've personally melted.'",
+  "You pause at *Grant Writing for the Perpetually Rejected.* Chapter 3, 'How to Explain Digital Humanities to Scientists,' is just a single page that says 'Good luck with that.'",
+  "You find Jessica Marie Johnson's *Wicked Flesh.* Johnson's digital history methods are revolutionary, but you're still trying to explain to IT why the slavery database needs more than 8GB of RAM.",
+  "You turn the pages of *ChatGPT Ate My Homework: A Professor's Lament.* It's 400 pages of increasingly unhinged emails from faculty who can't tell student writing from AI anymore. The appendix is just crying emojis.",
+  "You examine Alan Liu's *The Laws of Cool.* Liu predicted digital humanities would be cool. Twenty years later, you're still waiting for the leather jackets and motorcycles he promised.",
+  "You flip open *Managing Humanities Researchers: Like Herding Cats, But the Cats Have Tenure.* The book is mostly pictures of cats sitting on keyboards, which honestly explains a lot about your project timelines.",
+  "You pick up Ted Underwood's *Distant Horizons.* His machine learning approach to literature is brilliant, but you're pretty sure your neural network just wrote fanfiction about Moby Dick and Pride and Prejudice.",
+  "You leaf through *Python for Humanists Who Still Miss the Semicolon.* Every code example includes at least three literary references and a footnote explaining why loops are a metaphor for existence.",
+  "You grab *The CUDA Programming Guide.* You bought this to understand GPU computing, but it mostly serves as a monitor stand. The bookmark is still on page 3, where it's been since 2019.",
+  "You pick up Rita Raley's *Tactical Media.* Raley's vision of digital resistance is inspiring, though your biggest act of rebellion lately was using Comic Sans in a budget presentation.",
+  "You find *Debugging Your Digital Humanities Project: A Tragicomedy.* Chapter 1 begins: 'It worked on my machine.' Chapter 12 ends: 'Have you tried turning civilization off and on again?'",
+  "You glance at N. Katherine Hayles' *How We Think.* Hayles argues humans and machines think together now. Your laptop agrees by crashing right when you need it most.",
+  "You open *The Art of Explaining APIs to Medievalists.* It's mostly diagrams comparing REST endpoints to monastery scriptoriums. Somehow, this actually works.",
+  "You flip through Miriam Posner's essays on DH infrastructure. She's right about everything, which makes you feel worse about your center's duct-taped-together tech stack.",
+  "You pause at *Sustainable Computing for the Humanities.* It suggests running your text analysis on a Raspberry Pi. Your 10TB corpus laughs at this suggestion.",
+  "You leaf through *Privacy in the Age of Big Data: LOL JK.* It's just 200 pages of screenshots showing what Google knows about you. The author's therapy bills are included as an appendix.",
+  "You examine *When Your OCR Thinks Everything is Germanic: A Troubleshooting Guide.* Every example shows Latin text being interpreted as shopping lists in Swedish.",
+  "You grab *The Complete Guide to Center Budgeting.* Someone has annotated it heavily. Most notes just say 'HA!' next to the suggested allocations for 'miscellaneous technical expenses.'",
+  "You find Johanna Drucker's *SpecLab.* Her experimental approach to digital aesthetics is groundbreaking, but you're still explaining why the humanities need anything fancier than Microsoft Word.",
+  "You open *Version Control for Academics: Git Gud or Git Out.* Half the book is just explaining why 'final_FINAL_reallyFinal_v2_ACTUALFINAL.docx' isn't sustainable.",
+  "You pick up *The Ethical AI Handbook for Humanities Centers.* It's surprisingly thin. Page 1 just says: 'Have you considered not using AI?' The remaining pages are blank for notes."
 ];
 
 let books = initialBooks;
 		
 // Email challenges for the monitor
+// Email challenges for the monitor
 let initialEmailChallenges = [
   {
-    question: "Dear Chair,\n\nI've just received a draft from a student, and I’m 90% sure the essay was written by a robot. The thing is, it's better than my own dissertation. Should I let it slide or prepare for our AI overlords?\n\nSincerely,\nProf. Linda Syntax",
-    responses: ["Acknowledge the AI brilliance", "Suggest a cautious conversation", "Encourage innovation through cyborg minds"],
+    question: "Dear Director,\n\nI've just discovered our text analysis project has been running on the campus servers for 72 hours straight. The sustainability office is asking why our carbon footprint looks like Godzilla's. Should I pull the plug or claim we're studying climate change narratives?\n\nSincerely,\nProf. Linda Syntax",
+    responses: ["Switch to more efficient algorithms", "Blame it on essential research", "Invest in carbon offsets and pray"],
     effects: [
-      { faculty: +1, admin: -1, student: 0 }, // For "Acknowledge the AI brilliance"
-      { faculty: +0, admin: +1, student: -1 }, // For "Suggest a cautious conversation"
-      { faculty: -1, admin: -1, student: +1 }  // For "Encourage innovation through cyborg minds"
+      { faculty: +1, admin: +1, student: -1 }, // For "Switch to more efficient algorithms"
+      { faculty: +1, admin: -1, student: 0 },  // For "Blame it on essential research"
+      { faculty: -1, admin: +1, student: +1 }  // For "Invest in carbon offsets and pray"
     ]
   },
   {
-    question: "Dear Chair,\n\nI've noticed that during exams, half the students are typing furiously while the other half stare blankly at their screens, probably waiting for ChatGPT to save the day. Should I intervene or just tell them to ask the Provost for divine intervention?\n\nBest,\nDr. Harriet Typewell",
-    responses: ["Prohibit AI in exams", "Allow AI under supervision", "Let the Provost handle it"],
+    question: "Dear Director,\n\nMy students are using GPT-4 to generate 'historical' primary sources for their digital archives project. The AI thinks the Civil War had mechs. Should I embrace this steampunk history or insist on actual documents?\n\nBest,\nDr. Harriet Typewell",
+    responses: ["Require verified primary sources only", "Use it as a lesson in source criticism", "Submit it to a science fiction journal"],
     effects: [
-      { faculty: +1, admin: +1, student: -1 }, // For "Prohibit AI in exams"
-      { faculty: -1, admin: 0, student: +1 },  // For "Allow AI under supervision"
-      { faculty: -1, admin: -1, student: +1 }  // For "Let the Provost handle it"
+      { faculty: +1, admin: +1, student: -1 }, // For "Require verified primary sources only"
+      { faculty: 0, admin: 0, student: +1 },   // For "Use it as a lesson in source criticism"
+      { faculty: -1, admin: -1, student: +1 }  // For "Submit it to a science fiction journal"
     ]
   },
   {
-    question: "Dear Chair,\n\nA few students are using AI to write their essays but 'forgetting' to mention it. I know the bots didn’t get writer’s block, but the ethics police might have a word. Should I let it slide, or make them confess their AI sins?\n\nYours,\nProf. Julius Paperjam",
-    responses: ["Demand AI citations", "Start an ethics discussion", "Ignore it, they’ll never know"],
+    question: "Dear Director,\n\nOur facial recognition project for analyzing historical photographs just identified George Washington as three different K-pop stars. The algorithm seems to have strong opinions about 18th-century hairstyles. Should we retrain it or pivot to a boy band history project?\n\nYours,\nProf. Julius Paperjam",
+    responses: ["Debug the algorithm immediately", "Add it to our bias case studies", "Launch 'Founding Fathers: The Musical'"],
     effects: [
-      { faculty: +1, admin: +1, student: -1 }, // For "Demand AI citations"
-      { faculty: +0, admin: +1, student: -1 }, // For "Start an ethics discussion"
-      { faculty: -1, admin: 0, student: +1 }   // For "Ignore it, they’ll never know"
+      { faculty: +1, admin: +1, student: 0 },  // For "Debug the algorithm immediately"
+      { faculty: 0, admin: +1, student: +1 },  // For "Add it to our bias case studies"
+      { faculty: -1, admin: -1, student: +1 }  // For "Launch 'Founding Fathers: The Musical'"
     ]
   },
   {
-    question: "Dear Chair,\n\nOne of my students claims that their essay is 'half-human, half-AI,' and honestly, it’s starting to sound like the next Marvel movie. How do I grade this... hybrid? Should I focus on the human part, or start handing out Avengers points?\n\nSincerely,\nDr. Janet Scribble",
-    responses: ["Focus on the human effort", "Use AI detection software", "Let the Avengers handle it"],
+    question: "Dear Director,\n\nA student's network visualization of Victorian literature looks suspiciously like their Instagram follower network. They claim it's 'digital autoethnography.' Should I fail them for laziness or nominate them for innovative methodology?\n\nSincerely,\nDr. Janet Scribble",
+    responses: ["Demand actual Victorian data", "Explore this as legitimate DH method", "Check if they at least used Gephi"],
     effects: [
-      { faculty: 0, admin: -1, student: +1 },  // For "Focus on the human effort"
-      { faculty: +1, admin: +1, student: -1 }, // For "Use AI detection software"
-      { faculty: -1, admin: -1, student: +1 }  // For "Let the Avengers handle it"
+      { faculty: +1, admin: +1, student: -1 }, // For "Demand actual Victorian data"
+      { faculty: -1, admin: 0, student: +1 },  // For "Explore this as legitimate DH method"
+      { faculty: 0, admin: -1, student: +1 }   // For "Check if they at least used Gephi"
     ]
   },
   {
-    question: "Dear Chair,\n\nA student just told me they’ve decided to outsource their entire semester’s writing to ChatGPT. I thought I was teaching composition, not AI outsourcing strategies. Should I just roll with it or start drafting their resignation letter?\n\nBest,\nProf. Larry Scribbler",
-    responses: ["Set limits on AI use", "Encourage balance, but no AI 100%", "Let ChatGPT teach the course"],
+    question: "Dear Director,\n\nThe library is furious. Apparently, my web scraping tutorial resulted in 30 students simultaneously downloading their entire digital collections. Their servers are smoking, literally. Should I teach responsible scraping or suggest they upgrade from Windows 98?\n\nBest,\nProf. Larry Scribbler",
+    responses: ["Implement strict rate limiting", "Apologize and offer server CPR", "Suggest they try turning it off and on"],
     effects: [
-      { faculty: +1, admin: 0, student: -1 }, // For "Set limits on AI use"
-      { faculty: 0, admin: 0, student: +1 },  // For "Encourage balance, but no AI 100%"
-      { faculty: -1, admin: -1, student: +1 } // For "Let ChatGPT teach the course"
-    ]
-  },
-	{
-    question: "Dear Chair,\n\nWe’ve just implemented a new AI detection tool campus-wide. It’s supposed to be 99% accurate at identifying AI-generated essays… except when it’s not. If you encounter any issues, please contact IT, who will most likely forward your question back to you. Good luck!\n\nBest,\nDean Eloise Bureaucracy",
-    responses: ["Trust the AI detection software", "Use it but double-check manually", "Ignore it and trust your gut"],
-    effects: [
-      { faculty: -1, admin: +1, student: 0 },  // For "Trust the AI detection software"
-      { faculty: +1, admin: +1, student: -1 }, // For "Use it but double-check manually"
-      { faculty: +0, admin: -1, student: +1 }  // For "Ignore it and trust your gut"
+      { faculty: +1, admin: +1, student: -1 }, // For "Implement strict rate limiting"
+      { faculty: 0, admin: +1, student: 0 },   // For "Apologize and offer server CPR"
+      { faculty: -1, admin: -1, student: +1 }  // For "Suggest they try turning it off and on"
     ]
   },
   {
-    question: "Dear Chair,\n\nThe President’s office has decided that all faculty should integrate AI writing assistants into their courses. No specific details have been provided, but we’re confident you can figure it out. We’re calling this initiative ‘AI for All’—catchy, right? Please submit a report by Friday.\n\nSincerely,\nProvost Gregory Vagueness",
-    responses: ["Embrace AI for All", "Ask for more guidance (good luck)", "Quietly ignore it and hope no one notices"],
+    question: "Dear Director,\n\nWe've been asked to implement an AI ethics review board for DH projects. The committee wants to meet monthly, but half the members think 'Python' is just a snake and 'GitHub' is a typo. How do we proceed without crushing souls?\n\nBest,\nDean Eloise Bureaucracy",
+    responses: ["Provide extensive tech training first", "Focus on ethics, translate the tech", "Replace them with chatbots"],
     effects: [
-      { faculty: -1, admin: +1, student: +1 },  // For "Embrace AI for All"
-      { faculty: +1, admin: 0, student: 0 },    // For "Ask for more guidance"
-      { faculty: 0, admin: -1, student: +1 }    // For "Quietly ignore it and hope no one notices"
+      { faculty: +1, admin: +1, student: 0 },  // For "Provide extensive tech training first"
+      { faculty: 0, admin: +1, student: +1 },  // For "Focus on ethics, translate the tech"
+      { faculty: -1, admin: -1, student: +1 }  // For "Replace them with chatbots"
     ]
   },
   {
-    question: "Dear Chair,\n\nWe’ve been hearing complaints that faculty are relying too much on AI to grade assignments. We encourage you to remind your team that human oversight is still important, unless the AI is doing a better job, in which case… never mind. Do with this information what you will.\n\nWarmly,\nPresident Amanda Abstraction",
-    responses: ["Reinforce the importance of human grading", "Suggest minimal AI use", "Let the AI handle it all"],
+    question: "Dear Director,\n\nThe President wants all DH projects to be 'accessible, sustainable, and cutting-edge.' Also, the budget is $500. I assume this includes snacks for the launch party. Please advise on which laws of physics we should violate first.\n\nSincerely,\nProvost Gregory Vagueness",
+    responses: ["Promise miracles, deliver PDFs", "Explain the reality diplomatically", "Spend it all on really good snacks"],
     effects: [
-      { faculty: +1, admin: +1, student: -1 },  // For "Reinforce the importance of human grading"
-      { faculty: 0, admin: 0, student: +1 },    // For "Suggest minimal AI use"
-      { faculty: -1, admin: +1, student: +1 }   // For "Let the AI handle it all"
+      { faculty: -1, admin: +1, student: 0 },   // For "Promise miracles, deliver PDFs"
+      { faculty: +1, admin: 0, student: 0 },    // For "Explain the reality diplomatically"
+      { faculty: +1, admin: -1, student: +1 }   // For "Spend it all on really good snacks"
     ]
   },
   {
-    question: "Dear Chair,\n\nThe Provost has just announced that all course syllabi must include an AI usage policy. We’ve attached a generic template that says something like 'Use AI responsibly.' We’re sure you can expand on that and make it meaningful. Have fun!\n\nBest regards,\nDean Eloise Bureaucracy",
-    responses: ["Adopt the template and move on", "Spend hours crafting a thoughtful policy", "Tell faculty to figure it out themselves"],
+    question: "Dear Director,\n\nOur new computer vision project analyzing medieval manuscripts keeps finding UFOs in the marginalia. Either monks were way ahead of their time, or our algorithm needs therapy. Should we publish in Digital Humanities Quarterly or Ancient Aliens?\n\nWarmly,\nPresident Amanda Abstraction",
+    responses: ["Retrain with better data", "Embrace interdisciplinary weirdness", "Contact the History Channel"],
     effects: [
-      { faculty: +0, admin: +1, student: -1 },  // For "Adopt the template and move on"
-      { faculty: +1, admin: 0, student: 0 },    // For "Spend hours crafting a thoughtful policy"
-      { faculty: -1, admin: -1, student: +1 }   // For "Tell faculty to figure it out themselves"
+      { faculty: +1, admin: +1, student: -1 },  // For "Retrain with better data"
+      { faculty: 0, admin: -1, student: +1 },   // For "Embrace interdisciplinary weirdness"
+      { faculty: -1, admin: -1, student: +1 }   // For "Contact the History Channel"
     ]
   },
   {
-    question: "Dear Chair,\n\nWe’re excited to introduce a new AI-powered virtual course assistant named ‘EduBot.’ It’s like a TA, but without the complaints! Please encourage your faculty to use it. We believe EduBot will revolutionize education—or at least take over a few inboxes.\n\nBest,\nProvost Gregory Vagueness",
-    responses: ["Strongly encourage faculty to use EduBot", "Suggest using EduBot cautiously", "Pretend EduBot doesn’t exist"],
+    question: "Dear Director,\n\nFaculty are complaining that our 'Introduction to DH' workshop assumed they knew what a 'terminal' was. Three professors are now convinced we're training them to be airport staff. How should we adjust our pedagogical approach?\n\nBest regards,\nDean Eloise Bureaucracy",
+    responses: ["Start with 'What is a computer?'", "Create visual metaphors for everything", "Lean into the airport theme"],
     effects: [
-      { faculty: -1, admin: +1, student: 0 },  // For "Strongly encourage faculty to use EduBot"
-      { faculty: +0, admin: +1, student: -1 }, // For "Suggest using EduBot cautiously"
-      { faculty: +1, admin: -1, student: +1 }  // For "Pretend EduBot doesn’t exist"
+      { faculty: +1, admin: +1, student: -1 },  // For "Start with 'What is a computer?'"
+      { faculty: +1, admin: 0, student: 0 },    // For "Create visual metaphors for everything"
+      { faculty: -1, admin: -1, student: +1 }   // For "Lean into the airport theme"
+    ]
+  },
+  {
+    question: "Dear Director,\n\nWe're excited to announce that all DH projects must now include a 'decolonial framework.' No one's quite sure what this means for our TCP/IP protocol analysis project, but we're confident you'll figure it out. Due Friday!\n\nBest,\nProvost Gregory Vagueness",
+    responses: ["Host critical theory code reviews", "Acknowledge the irony and proceed", "Decolonize the mainframe"],
+    effects: [
+      { faculty: +1, admin: +1, student: 0 },   // For "Host critical theory code reviews"
+      { faculty: 0, admin: -1, student: +1 },   // For "Acknowledge the irony and proceed"
+      { faculty: -1, admin: -1, student: +1 }   // For "Decolonize the mainframe"
     ]
   }
 ];
 
 let initialPhoneChallenges = [
   {
-    question: "Dean Eloise Bureaucracy: Hi, Chair. We’ve received a complaint that one of your faculty is asking students to write essays without AI assistance. Apparently, this has caused some confusion among the students—how could they possibly write without ChatGPT? Could you, um, handle this situation?",
-    responses: ["Encourage AI-free writing", "Let the students use AI as a tool", "Just tell the students to relax"],
+    question: "Dean Eloise Bureaucracy: Hi, Director. We've received a complaint that your Python workshop is teaching students to scrape copyrighted materials. The publishers are threatening legal action, and IT is hiding under their desks. Could you, um, make this go away?",
+    responses: ["Add ethics modules immediately", "Claim it's for research purposes only", "Blame it on Stack Overflow"],
     effects: [
-      { faculty: +1, admin: +1, student: -1 },  // For "Encourage AI-free writing"
-      { faculty: -1, admin: 0, student: +1 },   // For "Let the students use AI as a tool"
-      { faculty: 0, admin: -1, student: +1 }    // For "Just tell the students to relax"
+      { faculty: +1, admin: +1, student: -1 },  // For "Add ethics modules immediately"
+      { faculty: 0, admin: -1, student: +1 },   // For "Claim it's for research purposes only"
+      { faculty: -1, admin: -1, student: +1 }   // For "Blame it on Stack Overflow"
     ]
   },
   {
-    question: "Student Mark Overload: Hi! So, um, I tried using AI to write my term paper, and it just sent me some random nonsense about quantum mechanics. I’m in a poetry class. Should I be worried? Or just go with it and see if the professor notices?",
-    responses: ["Tell him to rewrite it himself", "Let him submit it and hope for the best", "Suggest switching to quantum poetry"],
+    question: "Student Mark Overload: Hi! So, um, I used GitHub Copilot to write my digital history project, and now it's suggesting I committed war crimes in 1823. I wasn't even born then! Should I push this commit or start over?",
+    responses: ["Delete everything and code it yourself", "Debug the anachronisms at least", "Lean into time-travel narrative"],
     effects: [
-      { faculty: +1, admin: 0, student: -1 },   // For "Tell him to rewrite it himself"
-      { faculty: 0, admin: -1, student: +1 },   // For "Let him submit it and hope for the best"
-      { faculty: -1, admin: 0, student: +1 }    // For "Suggest switching to quantum poetry"
+      { faculty: +1, admin: +1, student: -1 },  // For "Delete everything and code it yourself"
+      { faculty: 0, admin: 0, student: +1 },    // For "Debug the anachronisms at least"
+      { faculty: -1, admin: -1, student: +1 }   // For "Lean into time-travel narrative"
     ]
   },
   {
-    question: "Provost Gregory Vagueness: Chair, I need you to explain to the faculty that AI is *neither* a threat *nor* a panacea. Just tell them to integrate it into the curriculum—somehow—but don’t rely on it. Oh, and I’ll need a full report by next week. Thanks!",
-    responses: ["Pass the message along as-is", "Ask for clarification (good luck)", "Quietly ignore it and hope no one notices"],
+    question: "Provost Gregory Vagueness: Director, I need you to ensure all DH projects are both 'cutting-edge AI' and 'completely transparent about data usage.' Also, no one should feel surveilled. I don't see the contradiction here. Report due Monday!",
+    responses: ["Document the inherent paradox", "Create elaborate consent forms", "Install a suggestion box and flee"],
     effects: [
-      { faculty: 0, admin: +1, student: 0 },    // For "Pass the message along as-is"
-      { faculty: +1, admin: 0, student: 0 },    // For "Ask for clarification"
-      { faculty: 0, admin: -1, student: +1 }    // For "Quietly ignore it and hope no one notices"
+      { faculty: +1, admin: 0, student: 0 },    // For "Document the inherent paradox"
+      { faculty: 0, admin: +1, student: -1 },   // For "Create elaborate consent forms"
+      { faculty: -1, admin: -1, student: +1 }   // For "Install a suggestion box and flee"
     ]
   },
   {
-    question: "President Amanda Abstraction: Hello, Chair! We’re considering integrating AI-based tutoring across campus. You know, something to support students but not *replace* instructors. We want it to feel 'human-adjacent,' if that makes sense. Thoughts?",
-    responses: ["Fully support the initiative", "Suggest careful integration", "Say 'human-adjacent' is too vague and politely hang up"],
+    question: "President Amanda Abstraction: Hello, Director! Our new AI-powered historical chatbot is telling visitors that Benjamin Franklin invented Bitcoin. Marketing loves it, History department... less so. Thoughts on damage control?",
+    responses: ["Immediately retrain the model", "Add historical fact-checkers", "Pivot to alternative history museum"],
     effects: [
-      { faculty: -1, admin: +1, student: +1 },  // For "Fully support the initiative"
-      { faculty: +0, admin: +1, student: -1 },  // For "Suggest careful integration"
-      { faculty: +1, admin: -1, student: 0 }    // For "Politely hang up"
+      { faculty: +1, admin: +1, student: 0 },   // For "Immediately retrain the model"
+      { faculty: +1, admin: 0, student: -1 },   // For "Add historical fact-checkers"
+      { faculty: -1, admin: -1, student: +1 }   // For "Pivot to alternative history museum"
     ]
   },
   {
-    question: "Prof. Daisy Stubborn: Chair, I refuse to use this AI nonsense in my class. It’s a fad. Like the internet. Remember that? What do I do when students start quoting robots at me?",
-    responses: ["Encourage her to adapt", "Tell her to keep doing what she’s doing", "Suggest starting a conspiracy theory podcast"],
+    question: "Prof. Daisy Stubborn: Director, students in my medieval studies class are using AI to generate Middle English. It's somehow both grammatically perfect and completely nonsensical. How do I grade 'Ye Olde Machine Learning'?",
+    responses: ["Ban AI-generated historical languages", "Treat it as creative anachronism", "Make the AI take the midterm"],
     effects: [
-      { faculty: -1, admin: +1, student: 0 },   // For "Encourage her to adapt"
-      { faculty: +1, admin: -1, student: -1 },  // For "Tell her to keep doing what she’s doing"
-      { faculty: 0, admin: 0, student: +1 }     // For "Suggest starting a podcast"
+      { faculty: +1, admin: +1, student: -1 },  // For "Ban AI-generated historical languages"
+      { faculty: -1, admin: 0, student: +1 },   // For "Treat it as creative anachronism"
+      { faculty: 0, admin: -1, student: +1 }    // For "Make the AI take the midterm"
     ]
   },
   {
-    question: "Student Bella Panic: Um, Chair? I think I used ChatGPT to accidentally plagiarize myself? It’s, like, identical to something I wrote last semester, but now the plagiarism software thinks I’m copying… me? Help?",
-    responses: ["Tell her to revise the essay", "Tell her to submit it anyway", "Ask ChatGPT to solve its own problem"],
+    question: "Student Bella Panic: Um, Director? My text mining project found that Shakespeare was apparently tweeting in 1599? The timestamps look real but... that can't be right? My professor says I broke history?",
+    responses: ["Check your data cleaning pipeline", "Embrace temporal anomalies", "Contact Dr. Who immediately"],
     effects: [
-      { faculty: +1, admin: 0, student: -1 },   // For "Tell her to revise the essay"
-      { faculty: 0, admin: -1, student: +1 },   // For "Tell her to submit it anyway"
-      { faculty: -1, admin: +1, student: 0 }    // For "Ask ChatGPT to solve it"
+      { faculty: +1, admin: +1, student: -1 },  // For "Check your data cleaning pipeline"
+      { faculty: -1, admin: -1, student: +1 },  // For "Embrace temporal anomalies"
+      { faculty: 0, admin: 0, student: +1 }     // For "Contact Dr. Who immediately"
     ]
   },
   {
-    question: "Prof. Victor Tech-Savvy: Chair, I’ve integrated AI into *everything*—grading, feedback, even my coffee machine. Students love it. Admin, not so much. Do I need to dial it back?",
-    responses: ["Tell him to tone it down", "Encourage more AI integration", "Ask him to brew you a coffee with AI"],
+    question: "Prof. Victor Tech-Savvy: Director, I've created an AI that generates entire digital humanities grants. It's already won $2 million in funding. The catch? No human can understand what we promised to build. Help?",
+    responses: ["Hire interpreters immediately", "Let the AI build itself", "Return the money and run"],
     effects: [
-      { faculty: -1, admin: +1, student: 0 },   // For "Tell him to tone it down"
-      { faculty: +0, admin: -1, student: +1 },  // For "Encourage more AI integration"
-      { faculty: 0, admin: 0, student: +1 }     // For "Ask for AI coffee"
+      { faculty: 0, admin: +1, student: 0 },    // For "Hire interpreters immediately"
+      { faculty: -1, admin: -1, student: +1 },  // For "Let the AI build itself"
+      { faculty: +1, admin: +1, student: -1 }   // For "Return the money and run"
     ]
   },
   {
-    question: "Dean Eloise Bureaucracy: Chair, we’ve received a generous donation to create an AI research center on campus, but no one seems to know how to run it. Could you maybe… figure that out? Also, no budget yet. Good luck!",
-    responses: ["Agree to take it on", "Ask for funding first", "Recommend calling IT for help"],
+    question: "Dean Eloise Bureaucracy: Director, the IRB wants to review every DH project that uses AI. They're particularly concerned about your 'sentiment analysis of Victorian death notices.' Apparently, the dead can't consent?",
+    responses: ["Submit 400 pages of paperwork", "Argue the dead have no privacy", "Suggest séances for consent"],
     effects: [
-      { faculty: -1, admin: +1, student: 0 },   // For "Agree to take it on"
-      { faculty: 0, admin: 0, student: 0 },     // For "Ask for funding first"
-      { faculty: +1, admin: -1, student: 0 }    // For "Recommend IT help"
+      { faculty: +1, admin: +1, student: -1 },  // For "Submit 400 pages of paperwork"
+      { faculty: -1, admin: -1, student: +1 },  // For "Argue the dead have no privacy"
+      { faculty: 0, admin: -1, student: +1 }    // For "Suggest séances for consent"
     ]
   },
   {
-    question: "Student Jamie Excuse: Hey, Chair. So, like, I missed class because I was experimenting with AI to write my final paper. But now the AI has convinced me I should become a novelist. Do I still have to submit the essay?",
-    responses: ["Tell him to submit the essay", "Encourage his novelist dream", "Let him submit his novel as the assignment"],
+    question: "Student Jamie Excuse: Hey, Director. So, like, I trained a neural network on fan fiction, and now it's writing better scholarly articles than me. Can I list it as a co-author? It's demanding attribution.",
+    responses: ["Explain AI can't be an author", "Negotiate with the neural network", "Start an AI rights movement"],
     effects: [
-      { faculty: +1, admin: 0, student: -1 },   // For "Tell him to submit the essay"
-      { faculty: 0, admin: -1, student: +1 },   // For "Encourage his novelist dream"
-      { faculty: -1, admin: +1, student: +1 }   // For "Let him submit his novel"
+      { faculty: +1, admin: +1, student: -1 },  // For "Explain AI can't be an author"
+      { faculty: -1, admin: 0, student: +1 },   // For "Negotiate with the neural network"
+      { faculty: -1, admin: -1, student: +1 }   // For "Start an AI rights movement"
     ]
   },
   {
-    question: "Provost Gregory Vagueness: Chair, we’re hearing from students that faculty are either banning AI completely or using it excessively. Could you tell them to, I don’t know, find a middle ground? Make sure to send me a report on your progress.",
-    responses: ["Encourage faculty to find balance", "Request specific guidelines", "Pretend this conversation never happened"],
+    question: "Provost Gregory Vagueness: Director, we need all coding bootcamps to be 'accessible to humanities scholars' but also 'industry-ready.' Please make JavaScript poetic and Python philosophical. You have unlimited enthusiasm but no budget.",
+    responses: ["Create metaphor-based tutorials", "Recruit poet-programmers", "Teach coding through interpretive dance"],
     effects: [
-      { faculty: +1, admin: +1, student: 0 },   // For "Encourage faculty to find balance"
-      { faculty: +0, admin: 0, student: 0 },    // For "Request specific guidelines"
-      { faculty: -1, admin: -1, student: +1 }   // For "Pretend it never happened"
+      { faculty: +1, admin: +1, student: 0 },   // For "Create metaphor-based tutorials"
+      { faculty: 0, admin: 0, student: +1 },    // For "Recruit poet-programmers"
+      { faculty: -1, admin: -1, student: +1 }   // For "Teach coding through interpretive dance"
     ]
   }
 ];
-
 let initialDoorChallenges = [
   {
-    question: "Prof. Agnes Overwhelmed: Chair, I have three students who are submitting assignments with AI-generated titles like 'Untitled Essay 5' and 'This Essay is Definitely Human.' Can we set a rule about creative titles, or do I just need more coffee?",
-    responses: ["Encourage students to use real titles", "Let them be creative (or lazy)", "Offer her coffee and sympathy"],
+    question: "Prof. Agnes Overwhelmed: Director, I have three students whose 'digital archives' are just Instagram feeds with scholarly metadata. They're calling it 'auto-ethnographic data curation.' Can we set standards, or is this what DH is now?",
+    responses: ["Demand real archival standards", "Embrace social media as archive", "Start your own TikTok archive"],
     effects: [
-      { faculty: +1, admin: 0, student: -1 },   // For "Encourage students to use real titles"
-      { faculty: 0, admin: -1, student: +1 },   // For "Let them be creative"
-      { faculty: +1, admin: 0, student: 0 }     // For "Offer coffee and sympathy"
+      { faculty: +1, admin: +1, student: -1 },  // For "Demand real archival standards"
+      { faculty: -1, admin: -1, student: +1 },  // For "Embrace social media as archive"
+      { faculty: 0, admin: -1, student: +1 }    // For "Start your own TikTok archive"
     ],
-		lastName: "overwhelmed"
+    lastName: "overwhelmed"
   },
   {
-    question: "Prof. Sean Confused: Chair, I’ve been tasked with organizing the department’s new AI policy workshop, but I don’t actually know what AI is. Do I need to, like, download it first? Help me out here.",
-    responses: ["Explain AI basics to him", "Send him a Wikipedia link", "Tell him to 'download it' and see what happens"],
+    question: "Prof. Sean Confused: Director, I've been asked to teach 'Introduction to Digital Humanities,' but I thought DH meant 'Definitely Humanities.' Do I need to, like, learn computers first? Is Excel considered coding?",
+    responses: ["Start him with basic tutorials", "Tell him Excel totally counts", "Suggest he teach analog humanities"],
     effects: [
-      { faculty: 0, admin: +1, student: 0 },    // For "Explain AI basics"
-      { faculty: +1, admin: -1, student: 0 },   // For "Send a Wikipedia link"
-      { faculty: 0, admin: -1, student: +1 }    // For "Tell him to 'download it'"
+      { faculty: +1, admin: +1, student: 0 },   // For "Start him with basic tutorials"
+      { faculty: -1, admin: -1, student: +1 },  // For "Tell him Excel totally counts"
+      { faculty: 0, admin: -1, student: +1 }    // For "Suggest analog humanities"
     ],
-		lastName: "confused"
+    lastName: "confused"
   },
   {
-    question: "Tutor Mia Overexplainer: Chair, I’ve been helping a student who used AI for every part of their essay—brainstorming, drafting, even revising. Now they want me to proofread it. Am I just proofreading ChatGPT at this point?",
-    responses: ["Tell her to treat it like any other paper", "Ask her to focus on human-written sections", "Suggest she start giving AI feedback"],
+    question: "Tutor Mia Overexplainer: Director, I'm helping a student whose entire dissertation is GPT-4 analyzing GPT-3 analyzing Victorian novels. It's AI all the way down. Am I supervising a human or training Skynet?",
+    responses: ["Insist on human analysis layer", "Let the AIs talk to each other", "Check if student passes Turing test"],
     effects: [
-      { faculty: 0, admin: 0, student: -1 },    // For "Treat it like any other paper"
-      { faculty: +1, admin: 0, student: 0 },    // For "Focus on human-written sections"
-      { faculty: -1, admin: +1, student: +1 }   // For "Give AI feedback"
+      { faculty: +1, admin: +1, student: -1 },  // For "Insist on human analysis"
+      { faculty: -1, admin: -1, student: +1 },  // For "Let the AIs talk"
+      { faculty: 0, admin: 0, student: +1 }     // For "Check Turing test"
     ],
-		lastName: "overexplainer"
+    lastName: "overexplainer"
   },
   {
-    question: "Prof. Gary Gadgets: Chair, I’ve started using this new AI app in class that generates essay prompts based on whatever the students are talking about. Problem is, it just gave me 'Write about why pizza is the perfect metaphor for life.' Should I keep using it?",
-    responses: ["Encourage them to dial it back", "Tell them to go with the pizza metaphor", "Suggest a pizza party instead"],
+    question: "Prof. Gary Gadgets: Director, I've created an AI that generates research questions based on trending hashtags. It just suggested 'A Corpus Analysis of Victorian Literature Through the Lens of #HotGirlSummer.' Should I submit this to DHQ?",
+    responses: ["Gently suggest traditional topics", "Submit it immediately", "Pivot to meme studies program"],
     effects: [
-      { faculty: -1, admin: +1, student: 0 },   // For "Encourage him to dial it back"
-      { faculty: 0, admin: -1, student: +1 },   // For "Go with the pizza metaphor"
-      { faculty: 0, admin: 0, student: +1 }     // For "Suggest a pizza party"
+      { faculty: +1, admin: +1, student: -1 },  // For "Suggest traditional topics"
+      { faculty: -1, admin: -1, student: +1 },  // For "Submit it immediately"
+      { faculty: 0, admin: -1, student: +1 }    // For "Pivot to meme studies"
     ],
-		lastName: "gadgets"
+    lastName: "gadgets"
   },
   {
-    question: "Writing Center Tutor Liz Lost: Chair, a student just brought me an essay they swear they wrote themselves, but it sounds… too good. I can’t tell if it’s AI or they’ve been secretly brilliant all along. What do I do?",
-    responses: ["Trust the student's work", "Ask the student directly", "Pretend she never saw it"],
+    question: "Writing Center Tutor Liz Lost: Director, a student's network visualization is so beautiful it made me cry, but I'm pretty sure it's just showing their Spotify connections, not historical data. Do aesthetic lies count as data visualization?",
+    responses: ["Demand actual historical data", "If it's pretty, it's valid", "Submit it to MoMA instead"],
     effects: [
-      { faculty: +1, admin: 0, student: -1 },   // For "Trust the student"
-      { faculty: 0, admin: 0, student: +1 },    // For "Ask the student directly"
-      { faculty: -1, admin: 0, student: +1 }    // For "Pretend she never saw it"
+      { faculty: +1, admin: +1, student: -1 },  // For "Demand actual data"
+      { faculty: -1, admin: -1, student: +1 },  // For "If it's pretty, it's valid"
+      { faculty: 0, admin: -1, student: +1 }    // For "Submit to MoMA"
     ],
-		lastName: "lost"
+    lastName: "lost"
   },
   {
-    question: "Admin Assistant Tom Tired: Chair, I’ve just spent the last three hours trying to figure out how to schedule a meeting between you and a new AI vendor. Can we just tell them the AI can figure out the schedule for us?",
-    responses: ["Let him try that", "Offer to handle the meeting", "Tell him to take a coffee break"],
+    question: "Admin Assistant Tom Tired: Director, I've spent three days trying to install TensorFlow on the humanities server. It keeps saying 'insufficient poetry modules.' Is this a real error or is the computer mocking me?",
+    responses: ["Call IT for proper setup", "Install poetry and see what happens", "Let the server win this round"],
     effects: [
-      { faculty: 0, admin: +1, student: 0 },    // For "Let him try that"
-      { faculty: 0, admin: -1, student: 0 },    // For "Offer to handle the meeting"
-      { faculty: +1, admin: 0, student: 0 }     // For "Tell him to take a break"
+      { faculty: +1, admin: +1, student: 0 },   // For "Call IT for proper setup"
+      { faculty: -1, admin: -1, student: +1 },  // For "Install poetry"
+      { faculty: 0, admin: -1, student: +1 }    // For "Let server win"
     ],
-		lastName: "tired"
+    lastName: "tired"
   },
   {
-    question: "Prof. Helen Hallway: Chair, students have been using AI to write their research papers and then using *more* AI to fact-check themselves. It’s like AI Inception out there. Should I tell them to stop or just let the robots handle it?",
-    responses: ["Encourage human research", "Let the AI fact-check", "Tell her to write a paper on AI Inception"],
+    question: "Prof. Helen Hallway: Director, students are using AI to generate ancient manuscripts, then using more AI to 'discover' them, then using even MORE AI to analyze their findings. Should I report this to archaeology or just watch the ouroboros eat itself?",
+    responses: ["Stop the recursive madness", "Document it as performance art", "Apply for a recursion grant"],
     effects: [
-      { faculty: +1, admin: 0, student: -1 },   // For "Encourage human research"
-      { faculty: 0, admin: +1, student: +1 },   // For "Let the AI fact-check"
-      { faculty: -1, admin: 0, student: 0 }     // For "Write a paper on AI Inception"
+      { faculty: +1, admin: +1, student: -1 },  // For "Stop the madness"
+      { faculty: -1, admin: -1, student: +1 },  // For "Document as art"
+      { faculty: 0, admin: 0, student: +1 }     // For "Apply for grant"
     ],
-		lastName: "hallway"
+    lastName: "hallway"
   },
   {
-    question: "Tutor Jake Jittery: Chair, a student asked if I could help them understand how AI 'thinks'—like, what’s going on inside the machine's head? I don’t even know what’s going on inside my own head most days. Any advice?",
-    responses: ["Tell him to stick to writing", "Offer a basic explanation of AI", "Ask ChatGPT to explain itself"],
+    question: "Tutor Jake Jittery: Director, a student asked me to explain why their sentiment analysis thinks all medieval texts are 'extremely depressed.' I mean, they're not wrong, but should algorithms be diagnosing historical mental health?",
+    responses: ["Recalibrate for historical context", "Medieval times WERE depressing", "Suggest therapy for the algorithm"],
     effects: [
-      { faculty: 0, admin: 0, student: -1 },    // For "Stick to writing"
-      { faculty: +1, admin: 0, student: 0 },    // For "Explain AI basics"
-      { faculty: -1, admin: +1, student: +1 }   // For "Ask ChatGPT to explain"
-    ], 
-		lastName: "jittery"
+      { faculty: +1, admin: +1, student: -1 },  // For "Recalibrate for context"
+      { faculty: 0, admin: -1, student: +1 },   // For "Medieval times WERE depressing"
+      { faculty: -1, admin: -1, student: +1 }   // For "Algorithm therapy"
+    ],
+    lastName: "jittery"
   },
   {
-    question: "Prof. Dana Deadline: Chair, I just got an email about this AI policy thing you wanted me to implement. But I’ve been so busy grading, I haven’t had time to, you know… read it. Can I just make something up for now?",
-    responses: ["Tell her to read the policy", "Let her wing it", "Offer an extension on the deadline"],
+    question: "Prof. Dana Deadline: Director, I just realized my 'Digital Approaches to Renaissance Drama' course has been teaching students to digitize actual drama—as in department gossip. They've created a beautiful network graph of faculty feuds. Can I count this as DH?",
+    responses: ["Redirect to actual Renaissance drama", "Publish the gossip network", "Add 'Digital Dramatics' to curriculum"],
     effects: [
-      { faculty: +1, admin: 0, student: -1 },   // For "Read the policy"
-      { faculty: 0, admin: +1, student: +1 },   // For "Let her wing it"
-      { faculty: 0, admin: 0, student: +1 }     // For "Offer an extension"
+      { faculty: +1, admin: +1, student: -1 },  // For "Redirect to Renaissance"
+      { faculty: -1, admin: -1, student: +1 },  // For "Publish gossip network"
+      { faculty: 0, admin: -1, student: +1 }    // For "Add to curriculum"
     ],
-		lastName: "deadline"
+    lastName: "deadline"
   },
   {
-    question: "Admin Assistant Fran Frazzled: Chair, I’ve been asked to compile a report on all the ways the department is using AI. But I’m honestly not sure who’s using it or how. Should I start knocking on doors, or just write 'We’re working on it' and call it a day?",
-    responses: ["Help her track it down", "Tell her to write 'We’re working on it'", "Suggest she ask AI to write the report"],
+    question: "Admin Assistant Fran Frazzled: Director, I've been asked to calculate our center's carbon footprint, but every time I open the spreadsheet, another GPU fires up somewhere. Should I count the environmental cost of my despair?",
+    responses: ["Implement green computing policies", "Offset with virtual trees", "Count everything, including tears"],
     effects: [
-      { faculty: 0, admin: +1, student: 0 },    // For "Help her track it down"
-      { faculty: 0, admin: 0, student: +1 },    // For "Write 'We’re working on it'"
-      { faculty: -1, admin: +1, student: 0 }    // For "Ask AI to write it"
+      { faculty: +1, admin: +1, student: -1 },  // For "Green computing policies"
+      { faculty: -1, admin: 0, student: +1 },   // For "Virtual trees"
+      { faculty: 0, admin: -1, student: +1 }    // For "Count everything"
     ],
-		lastName: "frazzled"
+    lastName: "frazzled"
   }
 ];
 
@@ -458,7 +461,11 @@ function displaySplashScreen() {
   // Display the large title text
   textSize(64); // Large pixelated text
   textAlign(CENTER, CENTER);
-  text("AI: Admin Life.", width / 2, height / 2 - 50);
+  text("AI: Admin Life 2.0", width / 2, height / 2 - 70);
+
+  // Display the subtitle
+  textSize(32); // Medium text
+  text("(DH Edition)", width / 2, height / 2 - 20);
 
   // Display the smaller "Click to Play" text
   textSize(32); // Smaller text
@@ -475,7 +482,11 @@ function displayRulesScreen() {
 	fill(255);
   textSize(64); // Large pixelated text
   textAlign(CENTER, CENTER);
-  text("AI: Admin Life.", width / 2, 150);
+  text("AI: Admin Life 2.0", width / 2, 120);
+  
+  // Display the subtitle
+  textSize(32); // Medium text
+  text("(DH Edition)", width / 2, 170);
 	noStroke();
   // Set neon purple for the headings
   fill(255, 128, 0); // Neon purple
@@ -491,7 +502,7 @@ function displayRulesScreen() {
   textAlign(LEFT);
   
   // Instructions text
-  let howToPlayText = "In this game, you occupy the chair—literally—of a new department chair.\n\n" +
+  let howToPlayText = "In this game, you occupy the role of a digital humanities center director.\n\n" +
     "Your job is to navigate the endless meetings, emails, phone calls, and office drop-ins, " +
     "while balancing the needs and opinions of faculty, administrators, and students.\n\n" +
     "Mouseover different zones in the office to see what tasks await you, and click to engage. " +
@@ -516,12 +527,13 @@ function displayRulesScreen() {
   textAlign(LEFT);
   
   // Credits text
-  let creditsText = "AI Version - Designed by Anastasia Salter\n\n" +
+  let creditsText = "AI Version 2.0 - Designed by Anastasia Salter\n\n" +
     "Text, code, and image generation using:\n" +
     "- ChatGPT 4\n" +
     "- DALL-E\n" +
-    "- Adobe Firefly\n\n" +
-    "for the 2024 CCCC Fall Virtual Institute.";
+    "- Adobe Firefly\n" +
+    "- Claude Opus 4\n\n" +
+    "for the 2025 ACH Conference.";
   
   // Display the credits text
   text(creditsText, 200, 700, 600, 250);
@@ -595,9 +607,9 @@ function displayCharacterScreen() {
 	noStroke();
   // Display the introductory text on the left side
   text(
-    "Congratulations! You're a new chair at Some University, a campus with lots of students—and no AI policy.\n\n" +
+    "Congratulations! You're a new Digital Humanities Center Director at Some University, a campus with lots of students—and no AI policy.\n\n" +
     "You're tasked with providing leadership to your faculty and students in navigating the opportunities and challenges of generative AI on campus.\n\n" +
-    "There hasn't been much guidance from your upper administration, but it's time for your first open office hours, so you'll need to make it work. \n\n Good luck!\n\n",
+    "It seems like every day there's a new challenge - edtech coming into the classroom without faculty input; concerns about privacy, data, and environmental impact; and real possibilities for using generative AI in both programming and digital humanities data analysis.  \n\n Good luck!\n\n",
     150, 274, 700, 700 // Text bounds
   );
 	// Set yellow color for the "Click to begin" text
@@ -617,7 +629,7 @@ function displayIntroScreen() {
   textAlign(CENTER, CENTER);
 
   text(
-    "August 19, 2024.\n\nabout how to handle generative AI on campus.\n\nNow that everyone's back, the requests and concerns are really rolling in.\n\nHow will you handle them?",
+    "June 10, 2025.\n\nabout how to handle generative AI on campus.\n\nNow that everyone's back, the requests and concerns are really rolling in.\n\nHow will you handle them?",
     200, 500, 600);
 
   textSize(20); // Instruction to proceed
@@ -1020,42 +1032,41 @@ function checkInteractionOptions() {
   }
 }
 
-// Function to check reputation limits and trigger the endgame
 function checkReputationLimits() {
   if (facultyReputation <= 0) {
-    endgameMessage = "The faculty have formed a secret AI rebellion. You’re officially on the 'no-fly zone' list for every committee meeting. Time to start practicing your evil laugh. But tomorrow is another day. Click to continue.";
+    endgameMessage = "The faculty have declared your center a 'digital dystopia.' They've formed a Neo-Luddite reading group that meets in the basement, by candlelight, to discuss the good old days of card catalogs. Time to update your LinkedIn. But tomorrow is another day. Click to continue.";
     currentRoom = "endgame";
     return true;
   }
   if (facultyReputation >= 10) {
-    endgameMessage = "Faculty are raving about your AI policies. Someone even suggested naming the break room coffee maker after you. But tomorrow is another day. Click to continue.";
+    endgameMessage = "Faculty are calling you the 'Digital Humanities Whisperer.' Someone nominated you for a genius grant just for explaining what an API is without using the word 'thingy.' Your methods workshops have a waitlist. But tomorrow is another day. Click to continue.";
     currentRoom = "endgame";
     return true;
   }
   if (adminReputation <= 0) {
-    endgameMessage = "The administration is not amused. They’ve scheduled an emergency meeting—probably involving PowerPoints and raised eyebrows. Good luck explaining AI to them. But tomorrow is another day. Click to continue.";
+    endgameMessage = "The administration has decided your center is 'too experimental.' They've reassigned your server room to store old filing cabinets and your budget line now reads 'TBD (Totally Broke Department).' Time to practice grant writing. But tomorrow is another day. Click to continue.";
     currentRoom = "endgame";
     return true;
   }
   if (adminReputation >= 10) {
-    endgameMessage = "Congrats! The administration thinks you're a genius. You’ve been offered a special parking spot, which is the highest form of academic flattery. But tomorrow is another day. Click to continue.";
+    endgameMessage = "Amazing! The administration thinks you're revolutionizing the humanities. They've given you a blank check (it's still small, but it's blank!) and first dibs on any tech donations. Even IT returns your emails now. But tomorrow is another day. Click to continue.";
     currentRoom = "endgame";
     return true;
   }
   if (studentReputation <= 0) {
-    endgameMessage = "Students have gone full riot mode. There are rumors they’re building a giant AI effigy on the quad. You might want to avoid campus for a bit. But tomorrow is another day. Click to continue.";
+    endgameMessage = "Students have occupied the DH lab, declaring it a 'code-free zone.' They're using your 3D printers to make protest signs and your VR headsets as expensive paperweights. The memes about you are... not kind. But tomorrow is another day. Click to continue.";
     currentRoom = "endgame";
     return true;
   }
   if (studentReputation >= 10) {
-    endgameMessage = "The students have declared you their AI hero. Someone’s already designing a meme in your honor, and it’s trending. But tomorrow is another day. Click to continue.";
+    endgameMessage = "You've become a student legend! They've created a Discord server in your honor where they share your programming metaphors. Someone made a neural network that generates inspirational quotes in your style. But tomorrow is another day. Click to continue.";
     currentRoom = "endgame";
     return true;
   }
 
   // New condition: If the player has exhausted all challenges without major reputation changes
   if (facultyReputation > 0 && facultyReputation < 10 && adminReputation > 0 && adminReputation < 10 && studentReputation > 0 && studentReputation < 10 && challengesCompleted >= totalChallenges) {
-    endgameMessage = "You've successfully dodged AI-related chaos without really impressing or upsetting anyone. Somehow, you’ve survived the middle ground of academia. Bravo, for now. But tomorrow is another day. Click to continue.";
+    endgameMessage = "You've mastered the art of digital humanities diplomacy, keeping everyone equally confused but not upset. Your center exists in a quantum state of being both cutting-edge and comfortably traditional. Nobody knows what you do, but they're pretty sure it involves computers. But tomorrow is another day. Click to continue.";
     currentRoom = "endgame";
     return true;
   }
@@ -1064,58 +1075,58 @@ function checkReputationLimits() {
 }
 // Function to adjust reputation scores
 function adjustReputation(effects) {
-	feedbackMessage = "";
+  feedbackMessage = "";
   reputationChangeMessage = "";
 
   // Arrays of possible feedback messages for faculty reputation changes
   const facultyPositiveMessages = [
-    "Your faculty can't believe it—they actually like your decision. That's a first.",
-    "The faculty are praising your decision in the break room. Someone even bought donuts.",
-    "Faculty members are actually smiling in your direction. This feels weird.",
-    "Faculty approval is through the roof. They’re even saying nice things about you in emails!",
-    "Your faculty loved that decision. They've started drafting a memo about it—voluntarily."
+    "Your faculty can't believe it—they actually understood your technical explanation. Someone's taking notes!",
+    "The faculty are praising your decision over artisanal coffee. One even downloaded Python.",
+    "Faculty members are calling you 'surprisingly reasonable.' That's basically a standing ovation.",
+    "Faculty approval detected! They're voluntarily attending your workshops without free lunch.",
+    "Your faculty loved that. Someone just cited you favorably in a grant proposal—on purpose!"
   ];
   
   const facultyNegativeMessages = [
-    "Your faculty heard about that response, and they're not impressed. Expect some pointed questions at the next meeting.",
-    "The faculty aren’t exactly thrilled with that one. Someone's already crafting a strongly worded email.",
-    "Faculty members are grumbling in the hallways. Looks like your inbox is about to explode.",
-    "Your faculty didn’t like that response. Brace yourself for some extra 'constructive feedback.'",
-    "Your decision didn't sit well with the faculty. There's talk of forming a subcommittee to complain about it."
+    "Your faculty heard about that response and immediately formed a 'traditional scholarship' support group.",
+    "The faculty aren't thrilled. Someone's drafting a manifesto about the death of close reading.",
+    "Faculty members are muttering about 'kids these days and their databases.' Your name was mentioned.",
+    "Your faculty hated that. They're planning a symposium on 'Why Card Catalogs Were Better.'",
+    "Your decision sparked a faculty rebellion. They're threatening to go back to typewriters."
   ];
 
   // Arrays for admin reputation changes
   const adminPositiveMessages = [
-    "The administration is pleased. They’ve even bumped you up in the email CC hierarchy!",
-    "Congrats! The administration is considering giving you a special parking spot.",
-    "The admins are impressed! They might actually show up to your next meeting.",
-    "The administration just sent you a 'Great job!' email. They didn’t even use Comic Sans.",
-    "Your decision made the admins happy. Expect a mysterious gift card in your mailbox."
+    "The administration is thrilled! They don't understand what you do, but the graphs look impressive.",
+    "Congrats! The administration just called your center 'innovative' in a press release.",
+    "The admins are pleased! Your budget might actually get approved this year.",
+    "The administration loves it. They're nominating you for an award they just made up.",
+    "Your decision impressed the brass. They're considering giving you a window office!"
   ];
 
   const adminNegativeMessages = [
-    "The administration is confused by your decision. Prepare for an emergency meeting—probably with PowerPoints.",
-    "Admin HQ isn’t too pleased. You can feel the passive-aggressive emails coming.",
-    "The administration didn’t like that. Someone in the Provost's office is probably already writing a memo.",
-    "The admin team looks concerned. They’ve scheduled a meeting with the word 'urgent' in the subject line.",
-    "The administration is sending a 'we need to talk' email. Looks like you're getting some bonus paperwork."
+    "The administration is concerned about your 'experimental methods.' Expect a compliance audit.",
+    "Admin HQ wants to discuss your 'unconventional approaches.' Bring charts.",
+    "The administration didn't like that. Your center just got moved to the basement.",
+    "The admin team is worried. They've scheduled a meeting about 'digital best practices.'",
+    "The administration is sending lawyers. Apparently, 'disruption' isn't always welcome."
   ];
 
   // Arrays for student reputation changes
   const studentPositiveMessages = [
-    "The students are hyped. Someone’s already designing a meme in your honor.",
-    "Your students loved that decision. Rumor has it, you’re trending on campus social media.",
-    "Students are thrilled. Someone just started a fan page for you on their class group chat.",
-    "The student body is buzzing with excitement. A few of them even sent a thank-you note.",
-    "Your students are ecstatic. They’re debating whether to throw a party or make a viral TikTok."
+    "The students are stoked! Someone made a GitHub repo called 'director-is-awesome.'",
+    "Your students loved that. The DH lab Discord is full of fire emojis and your quotes.",
+    "Students are thrilled! They're actually showing up to optional coding workshops.",
+    "The student body is buzzing. Someone 3D-printed a trophy with your name on it.",
+    "Your students are ecstatic. They've started a data visualization of how cool you are."
   ];
 
   const studentNegativeMessages = [
-    "The students aren’t impressed. There’s already a petition circulating to 'overthrow the AI policies.'",
-    "Your decision didn’t sit well with the students. Someone’s organizing a sit-in. Again.",
-    "The students are not happy. You can hear the faint rustling of protest signs being made.",
-    "Students are grumbling about 'unfair AI policies.' Expect some angry tweets to start rolling in.",
-    "Your decision has students upset. They’re planning a walkout... or maybe just skipping class. It’s hard to tell."
+    "The students aren't impressed. Someone started a 'Humanities Without Computers' club.",
+    "Your decision upset the students. They're using your computational resources to mine cryptocurrency in protest.",
+    "The students are revolting. They've replaced all your Python scripts with Shakespeare quotes.",
+    "Students are angry about your 'techno-tyranny.' The lab computers mysteriously have new passwords.",
+    "Your decision has students fuming. They're planning a 'analog-only' thesis exhibition."
   ];
 
   // Adjust faculty reputation and give feedback
